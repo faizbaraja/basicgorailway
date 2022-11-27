@@ -15,8 +15,8 @@ RUN go build -o /app/main.go
 
 EXPOSE $PORT
 
-ENTRYPOINT [ "/app/main" ]
-# CMD ["go", "run", "/app/main.go"] 
+# ENTRYPOINT [ "/app/main" ]
+CMD ["go", "run", "/app/main.go"] 
 
 #docker build --tag belajar-docker-faiz:1.1 .
 #docker container create --name belajarfaiz -p 8080:8080 belajar-docker-faiz:1.1
