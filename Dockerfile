@@ -5,6 +5,8 @@ ARG PORT
 COPY main.go /app/main.go
 COPY go.mod /app/go.mod
 
+RUN go mod tidy
+
 EXPOSE $PORT
 
 CMD ["go", "run", "/app/main.go"] 
