@@ -1,7 +1,11 @@
 FROM golang:1.19.3-alpine
 
+ARG PORT
+
 COPY main.go /app/main.go
 COPY go.mod /app/go.mod
+
+EXPOSE $PORT
 
 CMD ["go", "run", "/app/main.go"] 
 
