@@ -8,12 +8,13 @@ COPY . .
 
 # COPY main.go /app/main.go
 # COPY go.mod /app/go.mod
+# COPY .env /app/.env
 
 RUN go mod tidy
 
 RUN go build -o /app/main.go
 
-EXPOSE $PORT
+EXPOSE ${PORT}
 
 # ENTRYPOINT [ "/app/main" ]
 CMD ["go", "run", "/app/main.go"] 
