@@ -21,7 +21,7 @@ func main() {
 	}
 
 	port := os.Getenv("PORT")
-	appPort := ":" + port
+	appPort := "0.0.0.0:" + port
 	fmt.Println(appPort)
 	http.ListenAndServe(appPort, nil)
 }
